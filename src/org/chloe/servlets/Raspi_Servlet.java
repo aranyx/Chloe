@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.chloe.raspi.Raspi_Gpio_Control;
+
 /**
  * Servlet implementation class Raspi_Servlet
  */
@@ -41,51 +43,23 @@ public class Raspi_Servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 				// get raspberry pin configuration
-				boolean rpi_7 = request.getParameter("rpi_7") != null;
-				boolean rpi_11 = request.getParameter("rpi_11") != null;
-				boolean rpi_12 = request.getParameter("rpi_12") != null;
-				boolean rpi_13 = request.getParameter("rpi_13") != null;
-				boolean rpi_15 = request.getParameter("rpi_15") != null;
-				boolean rpi_16 = request.getParameter("rpi_16") != null;
-				boolean rpi_18 = request.getParameter("rpi_18") != null;
-				boolean rpi_22 = request.getParameter("rpi_22") != null;
+				boolean GPIO_00 = request.getParameter("gpio0") != null;
+				boolean GPIO_01 = request.getParameter("gpio1") != null;
+				boolean GPIO_02 = request.getParameter("gpio2") != null;
+				boolean GPIO_03 = request.getParameter("gpio3") != null;
+				boolean GPIO_04 = request.getParameter("gpio4") != null;
+				boolean GPIO_05 = request.getParameter("gpio5") != null;
+				boolean GPIO_06 = request.getParameter("gpio6") != null;
+				boolean GPIO_07 = request.getParameter("gpio7") != null;
 				
-				PrintWriter out = response.getWriter();
-				out.println("<html><body>");
+				// assign control
+				Raspi_Gpio_Control rpi = new Raspi_Gpio_Control();
 				
-				if (rpi_7 == true) {
-					out.println("<h>rpi_7 ON</h>");
-				}
 				
-				if (rpi_11 == true) {
-					out.println("<h>rpi_11 ON</h>");
-				}
+				//
 				
-				if (rpi_12 == true) {
-					out.println("<h>rpi_12 ON</h>");
-				}
 				
-				if (rpi_13 == true) {
-					out.println("<h>rpi_13 ON</h>");
-				}
 				
-				if (rpi_15 == true) {
-					out.println("<h>rpi_15 ON</h>");
-				}
-				
-				if (rpi_16 == true) {
-					out.println("<h>rpi_16 ON</h>");
-				}
-				
-				if (rpi_18 == true) {
-					out.println("<h>rpi_18 ON</h>");
-				}
-				
-				if (rpi_22 == true) {
-					out.println("<h>rpi_22 ON</h>");
-				}
-				
-				out.println("</body></html>");
 				doGet(request, response);
 	}
 
