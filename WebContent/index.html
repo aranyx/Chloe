@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+
+	<div data-role="page">
+		<div data-role="header"><h1>Raspberry Pi</h1></div>
+		<div role="main" class="ui-content">
+			<form action="raspi_gpio_control" method="post">
+					<fieldset class="ui-grid-a">
+					<div class="ui-block-a">
+						<input disabled="" type="checkbox" name="rpi_1" id="rpi_1"><label for="rpi_1">3.3 VDC Power</label>
+						<input disabled="" type="checkbox" name="rpi_3" id="rpi_3"><label for="rpi_3">SDA0 (I2C)</label>
+						<input type="checkbox" name="rpi_5" id="rpi_5"><label for="rpi_5">SCL0 (I2C)</label>
+						<input type="checkbox" name="rpi_7" id="rpi_7"><label for="rpi_7">GPIO 7</label>
+						<input disabled="" type="checkbox" name="rpi_9" id="rpi_9"><label for="rpi_9">DNC</label>
+						<input type="checkbox" name="rpi_11" id="rpi_11"><label for="rpi_11">GPIO 0</label>
+						<input type="checkbox" name="rpi_13" id="rpi_13"><label for="rpi_13">GPIO 2</label>
+						<input type="checkbox" name="rpi_15" id="rpi_15"><label for="rpi_15">GPIO 3</label>
+						<input disabled="" type="checkbox" name="rpi_17" id="rpi_17"><label for="rpi_17">DNC</label>
+						<input disabled="" type="checkbox" name="rpi_19" id="rpi_19"><label for="rpi_19">MOSI</label>
+						<input type="checkbox" name="rpi_21" id="rpi_21"><label disabled="" for="rpi_21">MISO</label>
+						<input type="checkbox" name="rpi_23" id="rpi_23"><label for="rpi_23">SCLK</label>
+						<input disabled="" type="checkbox" name="rpi_25" id="rpi_25"><label for="rpi_25">DNC</label>
+					</div>
+					<div class="ui-block-b">
+						<input disabled="" type="checkbox" name="rpi_2" id="rpi_2"><label for="rpi_2">5.0 VDC Power</label>
+						<input disabled="" type="checkbox" name="rpi_4" id="rpi_4"><label for="rpi_4">DNC</label>
+						<input disabled="" type="checkbox" name="rpi_6" id="rpi_6"><label for="rpi_6">0V (Ground)</label>
+						<input type="checkbox" name="rpi_8" id="rpi_8"><label for="rpi_8">TxD (UART)</label>
+						<input type="checkbox" name="rpi_10" id="rpi_10"><label for="rpi_10">RxD (UART)</label>
+						<input type="checkbox" name="rpi_12" id="rpi_12"><label for="rpi_12">GPIO 1</label>
+						<input disabled="" type="checkbox" name="rpi_14" id="rpi_14"><label for="rpi_14">DNC</label>
+						<input type="checkbox" name="rpi_16" id="rpi_16"><label for="rpi_16">GPIO 4</label>
+						<input type="checkbox" name="rpi_18" id="rpi_18"><label for="rpi_18">GPIO 5</label>
+						<input disabled="" type="checkbox" name="rpi_20" id="rpi_20"><label for="rpi_20">DNC</label>
+						<input type="checkbox" name="rpi_22" id="rpi_22"><label for="rpi_22">GPIO 6</label>
+						<input type="checkbox" name="rpi_24" id="rpi_24"><label for="rpi_24">CE0</label>
+						<input type="checkbox" name="rpi_26" id="rpi_26"><label for="rpi_26">CE1</label>
+					</div>
+					</fieldset>
+					<input type="submit" value="Proceed">
+				</form>
+		</div>
+	</div>
+</body>
+</html>
