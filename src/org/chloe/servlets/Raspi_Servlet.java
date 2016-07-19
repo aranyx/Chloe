@@ -42,25 +42,22 @@ public class Raspi_Servlet extends HttpServlet {
 		doGet(request, response);
 		// TODO Auto-generated method stub
 		
-				// get raspberry pin configuration
-				boolean GPIO_00 = request.getParameter("gpio0") != null;
-				boolean GPIO_01 = request.getParameter("gpio1") != null;
-				boolean GPIO_02 = request.getParameter("gpio2") != null;
-				boolean GPIO_03 = request.getParameter("gpio3") != null;
-				boolean GPIO_04 = request.getParameter("gpio4") != null;
-				boolean GPIO_05 = request.getParameter("gpio5") != null;
-				boolean GPIO_06 = request.getParameter("gpio6") != null;
-				boolean GPIO_07 = request.getParameter("gpio7") != null;
+		// get raspberry pin configuration
+		boolean GPIO_00 = request.getParameter("gpio0") != null;
+		boolean GPIO_01 = request.getParameter("gpio1") != null;
+		boolean GPIO_02 = request.getParameter("gpio2") != null;
+		boolean GPIO_03 = request.getParameter("gpio3") != null;
+		boolean GPIO_04 = request.getParameter("gpio4") != null;
+		boolean GPIO_05 = request.getParameter("gpio5") != null;
+		boolean GPIO_06 = request.getParameter("gpio6") != null;
+		boolean GPIO_07 = request.getParameter("gpio7") != null;
+		
+		// assign control
+		Raspi_Gpio_Control rpi = new Raspi_Gpio_Control();
+		
+		rpi.toggleON(GPIO_00, GPIO_01, GPIO_02, GPIO_03, GPIO_04, GPIO_05,
+				GPIO_06, GPIO_07);
 				
-				// assign control
-				Raspi_Gpio_Control rpi = new Raspi_Gpio_Control();
-				
-				
-				//
-				
-				
-				
-				doGet(request, response);
 	}
 
 }
