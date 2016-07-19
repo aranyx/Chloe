@@ -12,7 +12,7 @@
 <body>
 
 	<div data-role="page">
-		<div data-role="header"><h1>Raspberry Pi</h1></div>
+		<div data-role="header" data-theme="b"><h1>Raspberry Pi</h1></div>
 		<div role="main" class="ui-content">
 			<form action="raspi_gpio_control" method="post">
 					<fieldset class="ui-grid-a">
@@ -27,7 +27,7 @@
 						<input type="checkbox" name="rpi_15" id="rpi_15"><label for="rpi_15">GPIO 3</label>
 						<input disabled="" type="checkbox" name="rpi_17" id="rpi_17"><label for="rpi_17">DNC</label>
 						<input disabled="" type="checkbox" name="rpi_19" id="rpi_19"><label for="rpi_19">MOSI</label>
-						<input type="checkbox" name="rpi_21" id="rpi_21"><label disabled="" for="rpi_21">MISO</label>
+						<input disabled="" type="checkbox" name="rpi_21" id="rpi_21"><label  for="rpi_21">MISO</label>
 						<input type="checkbox" name="rpi_23" id="rpi_23"><label for="rpi_23">SCLK</label>
 						<input disabled="" type="checkbox" name="rpi_25" id="rpi_25"><label for="rpi_25">DNC</label>
 					</div>
@@ -47,7 +47,7 @@
 						<input type="checkbox" name="rpi_26" id="rpi_26"><label for="rpi_26">CE1</label>
 					</div>
 					</fieldset>
-					<input type="submit" value="Proceed">
+					<input type="submit" value="Proceed" data-theme="b">
 				</form>
 		</div>
 	</div>

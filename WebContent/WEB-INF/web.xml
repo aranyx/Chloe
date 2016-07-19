@@ -9,14 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-        <servlet-name>Raspi_Gpio_Control</servlet-name>
-        <servlet-class>org.chloe.raspi.Raspi_Gpio_Control</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Raspi_Gpio_Control</servlet-name>
-        <url-pattern>/raspi_gpio_control</url-pattern>
-    </servlet-mapping>
-  
+    <servlet-name>Raspi_Servlet</servlet-name>
+    <servlet-class>org.chloe.servlets.Raspi_Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Raspi_Servlet</servlet-name>
+    <url-pattern>/raspi_gpio_control</url-pattern>
+  </servlet-mapping>
 </web-app>
