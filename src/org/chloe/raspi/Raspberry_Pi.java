@@ -1,6 +1,27 @@
 package org.chloe.raspi;
 
+import java.io.IOException;
+import com.pi4j.system.SystemInfo;
+
 public class Raspberry_Pi {
+	
+	// Hardware Info variables
+	String piCpuArchitecture = null;
+	String piSerialNumber = null;
+	String piProcessor = null;
+	
+	public Raspberry_Pi()  {
+		try {
+			piCpuArchitecture = SystemInfo.getCpuArchitecture();
+			piSerialNumber = SystemInfo.getSerial();
+			piProcessor = SystemInfo.getProcessor();
+		} catch (IOException | InterruptedException e) {
+			System.out.println("--> Error getting system info...");
+			e.printStackTrace();
+		}
+
+	}
+	
 	
 	public void displayHardwareInfo() {
 		
@@ -16,11 +37,13 @@ public class Raspberry_Pi {
 	 * 6. Raspberry Pi - Compute Module
 	 * 7. Raspberry Pi 2 - Model B
 	 */
-	public String getPiVersion() {
+	public String getPiVersion() throws IOException, InterruptedException {
+		String piVersion = null;
 		
-		String version = null;
+		// TODO: implement version check
 		
-		return version;
+		
+		return piVersion;
 	
 	}
 	
