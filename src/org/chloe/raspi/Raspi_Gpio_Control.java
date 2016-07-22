@@ -13,7 +13,7 @@ import com.pi4j.io.gpio.GpioPinDigitalOutput;
 import com.pi4j.io.gpio.PinState;
 import com.pi4j.io.gpio.RaspiPin;
 
-public class Raspi_Gpio_Control {
+public class Raspi_Gpio_Control extends Raspberry_Pi {
 	
 	/*
 	 * Using abstract pin numbering scheme same as
